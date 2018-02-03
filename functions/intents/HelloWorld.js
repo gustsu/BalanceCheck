@@ -17,7 +17,7 @@ https.get(url, res => {
   });
   res.on("end", () => {
     body = JSON.parse(body);
-    var bal = body.result[0] + body.result[1] + body.result[2];
+    let bal = body.result[0] + body.result[1] + body.result[2];
     return callback(null, (`Justin's Balance is 0.` + bal + ` Ethereum.`));
   });
 });
